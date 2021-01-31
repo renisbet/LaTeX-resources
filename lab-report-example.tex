@@ -1,0 +1,77 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx} %you need this package if you want to include images!
+
+\title{[title of experiment]}
+\author{[name]}
+\date{[date here]}
+
+\begin{document}
+
+\maketitle %you need this!
+
+\begin{abstract}
+    [put your abstract here]\cite{nameofreference}. Feel free to copy and paste this into your own document and then edit it.
+\end{abstract}
+
+\section{Theoretical background}
+This is some text.\\ %the \\ makes a new line
+This is a new line.
+
+This is a new paragraph.\\ %leaving an empty line makes a new paragraph
+Math mode: $x+y=1$ %this does maths in-line.
+
+Equation envelopes:
+\begin{equation}
+    \int_{-\infty}^{\infty}x^2e^{-x^2}=\frac{\sqrt{\pi}}{2} %when you write in equation envelope you don't need to do math mode separately - it's automatic! it also numbers your equations for you. if you don't want it numbered, do \begin{equation*} with the *
+\end{equation}
+
+\section{Experimental Method}
+\begin{figure}[h]%the 'h' makes sure the image goes here not anywhere else, otherwise LaTeX will decide where is best to put it. If it's still not going where you want, [h!] is overriding LaTeX's figure positioning rules so that will almost certainly work.
+    \centering
+    \includegraphics[width=85mm]{kitten.jpg}
+    \caption{This is a kitten}
+    \label{fig:kitten}
+\end{figure}
+
+\section{Results and Analysis}
+Here's a table.
+\begin{figure}[h]
+    \centering
+    \begin{tabular}{|p{2cm}|p{6cm}|}
+    \hline
+    \multicolumn{2}{|c|}{\textbf{Resistances}}\\
+    \hline
+    Symbol & Blood vessel \\
+    \hline
+    $ 1 $ & content \\
+    $ 2 $ & content \\
+    $ 3 $ &  content \\
+    $ 4 $ & content \\
+    $ 5 $ & content \\
+    $ 6 $ & content \\
+    $ 7 $ & content \\
+    $ 8 $ & content \\
+    $ 9 $ & content \\
+    $ 10 $ & content \\
+    $ 11 $ & content\\
+    \hline
+    \end{tabular}
+    \caption{This is a table as a figure. You can also have tables outside figures, just omit the begin figure envelope.}
+    \label{fig:my_label}
+\end{figure}
+
+\section{Discussion}
+\subsection{This is a subsection}
+\subsubsection{Common errors} %this is the max number of subsubsections you can do.
+Common errors that come up in LaTeX: the yellow warning triangles. "Underfull hbox" usually means you've done a new line with two slashes and also a gap for a paragraph - there's no need to make a new line as well as a paragraph but ultimately it makes no difference.\\ %try putting an empty line under this
+Overfull hbox usually means you've made a line too long in like an equation or something - it'll flow into the margins. Fix this by moving stuff onto a new line manually.
+
+
+\section{Conclusion}
+
+\begin{thebibliography}{9}
+\bibitem{nameofreference}This Is A Reference.
+
+\end{thebibliography}
+\end{document}
