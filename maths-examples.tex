@@ -1,0 +1,54 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+
+\title{\LaTeX{} Maths examples}
+\author{Becky Nisbet}
+\date{January 2021}
+
+\begin{document}
+
+\maketitle
+
+\section{Symbols}
+Infinity: $\infty$\\
+Double bold maths (like real numbers): $\mathbb{R}, \mathbb{C}, \mathbb{N}$ \\ %needs package amssymb
+Set notation: $\in, \notin, \ni, \subset, \subseteq, \supset, \supseteq, \cup, \cap \varnothing$\\
+Logic symbols: $\forall, \exists, \rightarrow, \Rightarrow, \equiv \iff, \leftrightarrow, \neg, \sim$
+
+\section{Calculus}
+Derivatives:\\
+$\frac{dy}{dx} =x^2+3\\
+\frac{d}{dx}y=x^2+3\\
+\frac{\partial y}{\partial x}=xy+1\\
+\frac{\partial}{\partial x}[xy]=y$\\
+Integrals:\\
+$\int x = \frac{x^2}{2}+c\\
+\int_0^2 x = 2$
+
+\section{Vectors and linear algebra}
+A matrix;\\
+$M = \left( %this has to go before the begin array if you want the brackets
+\begin{array}{cc}
+    
+    1 & 0 \\
+    0 & 1
+\end{array}
+\right)$\\
+A vector;\\
+$\vec{v}=\left(
+\begin{array}{c}
+    a \\
+    b
+\end{array}
+\right)$ \\%note how similar this is to constructing tables!
+Determinants;\\
+$\det{A} =
+\left|
+\begin{array}{cc}
+    a & b \\
+    c & d
+\end{array}
+\right|$
+
+\end{document}
